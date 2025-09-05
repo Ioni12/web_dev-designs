@@ -7,9 +7,9 @@ const Navbar = () => {
   const navItems = [{ label: "Home" }, { label: "About" }];
 
   return (
-    <div className="flex items-center justify-center p-4">
+    <div className="ixed top-0 left-0 right-0 z-50 flex items-center justify-center p-4">
       <nav className="relative w-full max-w-6xl">
-        <div className=" h-18 rounded-[40px] shadow-lg border border-zinc-400 ">
+        <div className=" h-18 rounded-[40px] shadow-lg border border-zinc-400  bg-white/80 backdrop-blur-sm">
           <div className="flex items-center justify-between h-full px-8">
             <div>
               <h1 className="text-2xl font-mono tracking-wider">Navbar</h1>
@@ -45,7 +45,7 @@ const Navbar = () => {
           </div>
         </div>
         {isMenuOpen && (
-          <div className="absolute top-full left-0 right-0 mt-4 border border-zinc-400 border-opacity-30 rounded-3xl shadow-lg lg:hidden z-30 ">
+          <div className="absolute top-full left-0 right-0 mt-4 border border-zinc-400 border-opacity-30 rounded-3xl shadow-lg lg:hidden z-30  bg-white/80 backdrop-blur-sm ">
             <div className="p-8 space-y-4">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-mono mb-2 tracking-wide">
