@@ -19,7 +19,7 @@ const HeroSection = ({
 
   return (
     <div className="flex items-center justify-center p-4">
-      <div className="w-full max-w-6xl">
+      <div className="w-full max-w-6xl mt-22">
         <div
           className={`rounded-[40px] shadow-lg border border-zinc-400 bg-gradient-to-br ${backgroundGradient} overflow-hidden`}
         >
