@@ -7,7 +7,7 @@ const Navbar = () => {
   const navItems = [{ label: "Home" }, { label: "About" }];
 
   return (
-    <div className="ixed top-0 left-0 right-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center p-4">
       <nav className="relative w-full max-w-6xl">
         <div className=" h-18 rounded-[40px] shadow-lg border border-zinc-400  bg-white/80 backdrop-blur-sm">
           <div className="flex items-center justify-between h-full px-8">
