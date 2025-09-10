@@ -5,12 +5,13 @@ import HeroExample from "./components/hero_section/HeroExample";
 import Input from "./components/inputs/Input";
 import FormDemo from "./components/forms/Form";
 import AuthComponent from "./components/auth_forms/AuthComponent";
+import TabDemo from "./components/tab_components/TabDemo";
 
 function App() {
   return (
     <>
       <Navbar />
-      <AuthComponent />
+      <TabDemo />
     </>
   );
 }

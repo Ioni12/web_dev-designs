@@ -1,14 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+  const menuRef = useRef(null);
 
   const navItems = [{ label: "Home" }, { label: "About" }];
 
+  // Handle clicks outside the menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    // Only add the event listener when the menu is open
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("touchstart", handleClickOutside);
+    }
+
+    // Cleanup event listeners
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [isMenuOpen]);
+
   return (
     <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center p-4">
-      <nav className="relative w-full max-w-6xl">
+      <nav className="relative w-full max-w-6xl" ref={menuRef}>
         <div className=" h-18 rounded-[40px] shadow-lg border border-zinc-400  bg-white/80 backdrop-blur-sm">
           <div className="flex items-center justify-between h-full px-8">
             <div>
